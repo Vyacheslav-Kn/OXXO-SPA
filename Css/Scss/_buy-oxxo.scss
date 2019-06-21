@@ -1,0 +1,38 @@
+$title-color: #666666;
+
+$title-signature-font-size: 20px;
+
+.buy-oxxo {
+    @extend %we-are-amazing__title-signature;
+    margin-bottom: 0px;
+}
+
+.buy-oxxo__title-underline {
+    @extend %we-are-amazing__title-underline;
+    color: $title-color;
+    background: $title-color;
+    margin-bottom: 80px;
+}
+
+.buy-oxxo__title-signature {
+    @extend %we-are-amazing__title-signature;
+    color: $title-color;
+    font-size: $title-signature-font-size;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.buy-oxxo__title-signature_color_orange{
+    color: $orange-color;
+}
+
+.buy-oxxo__button {
+    @extend %about-us__description-button-shared;
+    margin-bottom: 100px;
+    margin-top: 20px;
+}
+
+.buy-oxxo__title {
+    @extend %we-are-amazing__title;
+    color: $title-color;
+}

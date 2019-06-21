@@ -1,0 +1,53 @@
+$background-color: #202020;
+$menu-link-color: #878686;
+
+$reference-font-size: 14px;
+$logo-width: 100px;
+$logo-font-size: 30px;
+$reference-menu-width: 370px;
+
+.reference-info {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    background: $background-color;
+    font-family: $open-sans-font;
+    font-size: $reference-font-size;
+}
+
+.reference-info__logo {
+    @extend %intro__logo;
+
+    width: $logo-width;
+    border: none;
+    padding: 0px 0px;
+    margin-left: 0px;
+}
+
+.reference-info__logo-title {
+    font-size: $logo-font-size;
+    font-weight: 300;
+}
+
+.reference-info__copyright {
+    color: white;
+    display: inline-block;
+    margin-left: 20px;
+    transform: translateY(-50%);
+}
+
+.reference-info__menu {
+    display: inline-block;
+    transform: translateY(-50%);
+    width: $reference-menu-width;
+    margin-left: 305px;
+}
+
+.reference-info__menu-link {
+    display: inline-block;
+    color: $menu-link-color;
+    margin-right: 25px;
+
+    &:nth-last-of-type(1) {
+        margin-right: 0px;
+    }
+}

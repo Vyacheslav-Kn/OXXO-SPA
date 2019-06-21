@@ -1,0 +1,130 @@
+$title-color: #666666;
+$signature-wrapper-background: #f0f0f0;
+$signature-title-color: #363636;
+
+$single-work-height: 255px;
+$single-work-width: 25%;
+$button-group-width: 100%;
+$button-group-height: 165px;
+$button-width: 62px;
+$button-height: 60px;
+$button-font-size: 20px;
+$signature-wrapper-width: 100%;
+$signature-wrapper-height: 90px;
+$signature-title-font-size: 20px;
+$signature-text-font-size: 14px;
+
+.see-our-work {
+    @extend %we-are-amazing__title-signature;
+}
+
+.see-our-work__title-underline {
+    @extend %we-are-amazing__title-underline;
+    color: $title-color;
+    background: $title-color;
+}
+
+.see-our-work__title-signature {
+    @extend %we-are-amazing__title-signature;
+    color: $title-color;
+}
+
+.see-our-work__title {
+    @extend %we-are-amazing__title;
+    color: $title-color;
+}
+
+.see-our-work__single-work {
+    z-index: 0; /* hover fix */
+    position: relative;
+    width: $single-work-width;
+    height: $single-work-height;
+    float: left;
+
+    &:hover {
+        .see-our-work__button-group-wrapper, .see-our-work__work-signature-wrapper {
+            z-index: 1;
+        }
+    }
+}
+
+.see-our-work__work-img {
+    width: 100%;
+    height: inherit;
+}
+
+.see-our-work__button-group-wrapper {
+    z-index: -1;
+    width: $button-group-width;
+    position: absolute;
+    height: $button-group-height;
+    background: transparent;
+    top: 0;
+}
+
+.see-our-work__button-group {
+    position: absolute;
+    top: 50%;
+    width: inherit;
+    transform: translateY(-50%);
+}
+
+.see-our-work__button {
+    display: inline-block;
+    color: white;
+    margin-right: 30px;
+    background: transparent;
+    border: solid 2px white;
+    border-radius: 50%;
+    font-size: $button-font-size;
+    width: $button-width;
+    height: $button-height;
+    cursor: pointer;
+
+    &:nth-last-of-type(1) {
+        margin-right: 0px;
+    }
+
+    &:hover {
+        color: $orange-color;
+        background-color: white;
+    }
+}
+
+.see-our-work__button-icon {
+    display: inline-block;
+    margin-top: 50%;
+    transform: translateY(-50%);
+}
+
+.see-our-work__work-signature-wrapper {
+    z-index: -1;
+    width: $signature-wrapper-width;
+    position: absolute;
+    height: $signature-wrapper-height;
+    bottom: 0;
+    background: $signature-wrapper-background;
+}
+
+.see-our-work__work-signature {
+    position: absolute;
+    top: 50%;
+    width: inherit;
+    transform: translateY(-50%);
+}
+
+.see-our-work__signature-title, .see-our-work__signature-text {
+    margin: 0;
+    padding: 0;
+}
+
+.see-our-work__signature-title {
+    color: $signature-title-color;
+    font-size: $signature-title-font-size;
+}
+
+.see-our-work__signature-text {
+    color: $title-color;
+    text-transform: uppercase;
+    font-size: $signature-text-font-size;
+}

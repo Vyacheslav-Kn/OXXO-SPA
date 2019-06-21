@@ -1,0 +1,91 @@
+$title-color: #666666;
+$employee-link-background: #f0f0f0;
+
+$single-employee-width: 270px;
+$employee-name-font-size: 16px;
+$employee-link-width: 42px;
+$employee-link-height: 45px;
+$employee-link-font-size: 18px;
+
+.we-are-team {
+    @extend %we-are-amazing__title-signature;
+    margin-bottom: 20px;
+}
+
+.we-are-team__title-underline {
+    @extend %we-are-amazing__title-underline;
+    color: $title-color;
+    background: $title-color;
+}
+
+.we-are-team__title-signature {
+    @extend %we-are-amazing__title-signature;
+    color: $title-color;
+}
+
+.we-are-team__title {
+    @extend %we-are-amazing__title;
+    color: $title-color;
+}
+
+.we-are-team__single-employee {
+    box-sizing: border-box; /* fix for employes line */
+    display: inline-block;
+    width: $single-employee-width;
+    margin-right: 25px;
+}
+
+.we-are-team__employee-avatar {
+    margin-bottom: 30px;
+}
+
+.we-are-team__employee-name {
+    margin-bottom: 0px;
+    color: $title-color;
+    font-size: $employee-name-font-size;
+}
+
+.we-are-team__employee-name_color_orange {
+    color: $orange-color;
+}
+
+.we-are-team__employee-description {
+    display: inline-block;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: $title-color;
+    font-size: $employee-name-font-size;
+    font-weight: 300;
+}
+
+.we-are-team__employee-contact-link {
+    display: inline-block;
+    color: $title-color;
+    margin-right: 10px;
+    background-color: $employee-link-background;
+    border-radius: 50%;
+    font-size: $employee-link-font-size;
+    width: $employee-link-width;
+    height: $employee-link-height;
+    cursor: pointer;
+
+    &:nth-last-of-type(1) {
+        margin-right: 0px;
+    }
+
+    &:hover {
+        color: white;
+        background-color: $orange-color;
+    }
+}
+
+.we-are-team__employee-contact-icon {
+    display: inline-block;
+    margin-top: 50%;
+    transform: translateY(-50%);
+}
+
+.we-are-team__single-employee:nth-last-of-type(1) {
+    margin-right: 0px;
+}

@@ -1,0 +1,170 @@
+$tooltip-background: #666666;
+$tooltip-color: #d6d6d6;
+
+$background-url: url(../../Images/what-clients-say.png);
+$review-title-font-size: 20px;
+$review-author-name-font-size: 16px;
+$client-logos-width: 100%;
+$client-logos-height: 160px;
+$single-logo-width: 170px;
+$tooltip-font-size: 14px;
+$tooltip-width: 195px;
+$tooltip-link-font-size: 12px;
+
+.what-clients-say {
+    @extend %we-are-amazing__title-signature;
+    margin-bottom: 0px;
+
+}
+
+.what-clients-say__title-underline {
+    @extend %we-are-amazing__title-underline;
+    margin-bottom: 80px;
+}
+
+.what-clients-say__title-signature {
+    @extend %we-are-amazing__title-signature;
+    margin-bottom: 40px;
+}
+
+.what-clients-say__background-wrapper {
+    background: $background-url;
+    background-size: cover;
+}
+
+.what-clients-say__title {
+    @extend %we-are-amazing__title;
+}
+
+%what-clients-say__review-text-shared {
+    display: block;
+    margin-top: 0px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.what-clients-say__review-title {
+    @extend %what-clients-say__review-text-shared;
+    font-size: $review-title-font-size;
+}
+
+.what-clients-say__review-author {
+    @extend %what-clients-say__review-text-shared;
+    font-size: $review-author-name-font-size;
+    margin-bottom: 40px;
+}
+
+.what-clients-say__review-author_color_orange {
+    color: $orange-color;
+}
+
+.what-clients-say__review-author_font_normal {
+    font-weight: normal;
+}
+
+%what-clients-say__slider-arrow-shared {
+    @extend %about-us__slider-arrow-shared;
+    display: inline-block; /* margin from review-author fix */
+    transform: none;
+    margin-top: 0px;
+    margin-bottom: 100px;
+}
+
+.what-clients-say__slider-arrow-left {
+    @extend %what-clients-say__slider-arrow-shared;
+    margin-right: 30px;
+}
+
+.what-clients-say__slider-arrow-right {
+    @extend %what-clients-say__slider-arrow-shared;
+}
+
+.what-clients-say__client-logos-wrapper {
+    width: $client-logos-width;
+    position: relative;
+    height: $client-logos-height;
+    background: $orange-color;
+}
+
+.what-clients-say__client-logos {
+    width: inherit;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+%what-clients-say__logos-slider-arrow-shared {
+    @extend %what-clients-say__slider-arrow-shared;
+    margin-bottom: 0px;
+    background: transparent;
+}
+
+.what-clients-say__logos-slider-arrow-left {
+    @extend %what-clients-say__logos-slider-arrow-shared;
+    float: left;
+    margin-left: 70px;
+}
+
+.what-clients-say__logos-slider-arrow-right {
+    @extend %what-clients-say__logos-slider-arrow-shared;
+    float: right;
+    margin-right: 70px;
+}
+
+.what-clients-say__single-logo {
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    width: $single-logo-width;
+
+    &:nth-last-of-type(1) {
+        margin-right: 0px;
+    }
+
+    &:hover .what-clients-say__logo-tooltip {
+        display: inline-block;
+    }
+}
+
+.what-clients-say__logo-tooltip {
+    box-sizing: border-box; /* fix for hover on logo */
+    position: absolute;
+    width: $tooltip-width;
+    display: none;
+    background: $tooltip-background;
+    color: $tooltip-color;
+    border-radius: $common-border-radius;
+    text-align: center;
+    padding: 15px 25px;
+    margin-left: -85px;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: -28px;
+        margin-left: -15px;
+        border-width: 15px;
+        border-style: solid;
+        border-color: transparent transparent $tooltip-background transparent;
+    }
+}
+
+.what-clients-say__tooltip-title, .what-clients-say__tooltip-text {
+    margin: 0 0 15px 0;
+    padding: 0;
+}
+
+.what-clients-say__tooltip-title {
+    font-size: $tooltip-font-size;
+}
+
+.what-clients-say__tooltip-text {
+    font-size: 12px;
+}
+
+.what-clients-say__tooltip-link {
+    color: $orange-color;
+    font-size: $tooltip-link-font-size;
+}

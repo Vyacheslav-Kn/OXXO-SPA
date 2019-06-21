@@ -1,0 +1,97 @@
+$background-url: url(../../Images/we-are-amazing.png);
+$horizontal-line-length: 170px;
+$title-font-size: 36px;
+$title-signature-font-size: 14px;
+$single-benefit-width: 370px;
+$benefit-description-width: 270px;
+$benefit-title-font-size: 18px;
+$benefit-text-font-size: 14px;
+
+%we-are-amazing__title-signature {
+    font-family: $open-sans-font;
+    text-align: center;
+    color: white;
+    font-size: $title-signature-font-size;
+    font-weight: 300;
+    margin-bottom: 80px;
+}
+
+%we-are-amazing__title-underline {
+    color: white;
+    width: $horizontal-line-length;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    height: 1px;
+    background: white;
+}
+
+.we-are-amazing__title-underline {
+    @extend %we-are-amazing__title-underline;
+}
+
+.we-are-amazing__title-signature {
+    @extend %we-are-amazing__title-signature;
+}
+
+.we-are-amazing {
+    background: $background-url;
+    background-size: cover;
+    text-align: center;
+}
+
+%we-are-amazing__title {
+    display: inline-block;
+    font-family: $open-sans-font;
+    margin-top: 100px;
+    font-weight: bold;
+    font-size: $title-font-size;
+    color: white;
+    text-transform: uppercase;
+}
+
+.we-are-amazing__title {
+    @extend %we-are-amazing__title;
+}
+
+.we-are-amazing__benefit-section:nth-of-type(2) {
+    margin-top: 80px;
+    padding-bottom: 100px;
+}
+
+.we-are-amazing__single-benefit {
+    padding-left: 35px;
+    box-sizing: border-box; /* fix for benefits line */
+    display: inline-block;
+    text-align: left;
+    width: $single-benefit-width;
+    margin-right: 25px;
+    color: white;
+    font-family: $open-sans-font;
+}
+
+.we-are-amazing__benefit-icon {
+    color: $orange-color;
+    font-size: 36px;
+}
+
+.we-are-amazing__benefit-description {
+    width: $benefit-description-width;
+    float: right;
+}
+
+.we-are-amazing__benefit-title {
+    font-size: $benefit-title-font-size;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.we-are-amazing__benefit-text {
+    color: white;
+    font-size: $benefit-text-font-size;
+    font-weight: 300;
+}
+
+.we-are-amazing__single-benefit:nth-of-type(3n) {
+    margin-right: 0px;
+}
