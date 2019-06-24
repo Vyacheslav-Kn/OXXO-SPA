@@ -17,7 +17,7 @@ $description-text-font-size: 14px;
 }
 
 .main-menu_shaded {
-    border-top: solid 3px $orange-color;
+    border-top: solid 3px $button-background;
     box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
 }
 
@@ -39,7 +39,7 @@ $description-text-font-size: 14px;
 }
 
 .about-us__logo-title_color_orange {
-    color: $orange-color;
+    color: $button-background;
 }
 
 .about-us__content {
@@ -91,8 +91,8 @@ $description-text-font-size: 14px;
     cursor: pointer;
 
     &:hover {
-        color: $orange-color;
-        border-color: $orange-color;
+        color: $button-background;
+        border-color: $button-background;
         background: white;
         opacity: 1;
     }
@@ -112,8 +112,8 @@ $description-text-font-size: 14px;
 
 %about-us__description-button-shared {
     text-transform: uppercase;
-    border: solid 1px $orange-color;
-    background: $orange-color;
+    border: solid 1px $button-background;
+    background: $button-background;
     margin-right: 30px;
     cursor: pointer;
     padding: 15px 30px;
@@ -125,7 +125,7 @@ $description-text-font-size: 14px;
 
     &:hover {
         background: white;
-        color: $orange-color;
+        color: $button-background;
     }
 }
 

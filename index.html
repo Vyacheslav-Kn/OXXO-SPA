@@ -676,39 +676,43 @@
                         <span class="section-title-icon"><i class="fa fa-leaf"></i></span> Our Services
                     </h3>
                     <div class="company-info__single-service">
-                        <button class="company-info__service-button">Web Design & Development 
-                            <span class="company-info__plus-icon">+</span>
-                            <span class="company-info__minus-icon-wrapper">
-                                <span class="company-info__minus-icon">-</span>
+                        <input class="company-info__service-checkbox" type="checkbox" id="service-1"/>
+                        <label class="company-info__service-label" for="service-1">Web Design & Development 
+                            <span class="company-info__service-plus-icon">+</span>
+                            <span class="company-info__service-minus-icon-wrapper">
+                                <span class="company-info__service-minus-icon">-</span>
                             </span>
-                        </button>
+                        </label>
                         <span class="company-info__service-description">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc. Claritas est etiam processus dynamicus, qui sequitur mutationem tudium .</span>
                     </div>
                     <div class="company-info__single-service">
-                        <button class="company-info__service-button">PHP & WordPress Coding 
-                            <span class="company-info__plus-icon">+</span>
-                            <span class="company-info__minus-icon-wrapper">
-                                <span class="company-info__minus-icon">-</span>
+                        <input class="company-info__service-checkbox" type="checkbox" id="service-2"/>
+                        <label class="company-info__service-label" for="service-2">PHP & WordPress Coding 
+                            <span class="company-info__service-plus-icon">+</span>
+                            <span class="company-info__service-minus-icon-wrapper">
+                                <span class="company-info__service-minus-icon">-</span>
                             </span>
-                        </button>
+                        </label>
                         <span class="company-info__service-description">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc. Claritas est etiam processus dynamicus, qui sequitur mutationem tudium .</span>
                     </div>
                     <div class="company-info__single-service">
-                        <button class="company-info__service-button">HTML 5 & CSS 3 
-                            <span class="company-info__plus-icon">+</span>
-                            <span class="company-info__minus-icon-wrapper">
-                                <span class="company-info__minus-icon">-</span>
+                        <input class="company-info__service-checkbox" type="checkbox" id="service-3"/>
+                        <label class="company-info__service-label" for="service-3">HTML 5 & CSS 3 
+                            <span class="company-info__service-plus-icon">+</span>
+                            <span class="company-info__service-minus-icon-wrapper">
+                                <span class="company-info__service-minus-icon">-</span>
                             </span>
-                        </button>
+                        </label>
                         <span class="company-info__service-description">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc. Claritas est etiam processus dynamicus, qui sequitur mutationem tudium .</span>
                     </div>
                     <div class="company-info__single-service">
-                        <button class="company-info__service-button">Project Management 
-                            <span class="company-info__plus-icon">+</span>
-                            <span class="company-info__minus-icon-wrapper">
-                                <span class="company-info__minus-icon">-</span>
+                        <input class="company-info__service-checkbox" type="checkbox" id="service-4"/>
+                        <label class="company-info__service-label" for="service-4">Project Management 
+                            <span class="company-info__service-plus-icon">+</span>
+                            <span class="company-info__service-minus-icon-wrapper">
+                                <span class="company-info__service-minus-icon">-</span>
                             </span>
-                        </button>
+                        </label>
                         <span class="company-info__service-description">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc. Claritas est etiam processus dynamicus, qui sequitur mutationem tudium .</span>
                     </div>
                 </div>
@@ -717,10 +721,22 @@
                         <span class="section-title-icon"><i class="fa fa-envelope"></i></span> Contact Form
                     </h3>
                     <form class="company-info__contact-form">
-                        <input class="company-info__contact-form-input" type="text" placeholder=" Name &#xf007; ">
-                        <input class="company-info__contact-form-input" type="text" placeholder=" Email &#xf2bb; ">
-                        <textarea class="company-info__contact-form-textarea" placeholder=" Message &#xf0e0; "></textarea>
-                        <button class="company-info__contact-form-button"><i class="fa fa-envelope"></i> submit</button>
+                        <div class="company-info__form-field-wrapper">
+                            <input class="company-info__form-input" type="text" required>
+                            <span class="company-info__form-input-placeholder" data-placeholder="Name"></span>
+                            <span class="company-info__form-input-icon"><i class="fa fa-user"></i></span>
+                        </div>
+                        <div class="company-info__form-field-wrapper">
+                            <input class="company-info__form-input" type="text" required>
+                            <span class="company-info__form-input-placeholder" data-placeholder="Email"></span>
+                            <span class="company-info__form-input-icon"><i class="fa fa-envelope"></i></span>
+                        </div>
+                        <div class="company-info__form-field-wrapper">
+                            <textarea class="company-info__form-textarea" required></textarea>
+                            <span class="company-info__form-input-placeholder" data-placeholder="Message"></span>
+                            <span class="company-info__form-textarea-icon"><i class="fa fa-pencil"></i></span>
+                        </div>
+                        <button class="company-info__form-button"><i class="fa fa-envelope"></i> submit</button>
                     </form>
                 </div>
             </div>

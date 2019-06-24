@@ -60,8 +60,11 @@ ul {
   .submenu__item:hover > ul, .submenu__item ul li:hover > ul {
     display: block;
     position: absolute; }
+  .submenu__item:hover > a, .submenu__item ul li:hover > a {
+    color: white; }
 
 .submenu__item > a, .submenu__item ul li > a {
+  display: block;
   color: #858585; }
   .submenu__item > a > i:nth-of-type(odd), .submenu__item ul li > a > i:nth-of-type(odd) {
     margin-right: 10px;
@@ -268,7 +271,7 @@ ul {
   float: right;
   margin-right: 20px; }
 
-.about-us__description-button, .buy-oxxo__button, .company-info__contact-form-button {
+.about-us__description-button, .buy-oxxo__button, .company-info__form-button {
   text-transform: uppercase;
   border: solid 1px #ff7200;
   background: #ff7200;
@@ -280,7 +283,7 @@ ul {
   margin-top: 30px;
   font-size: 15px;
   outline: none; }
-  .about-us__description-button:hover, .buy-oxxo__button:hover, .company-info__contact-form-button:hover {
+  .about-us__description-button:hover, .buy-oxxo__button:hover, .company-info__form-button:hover {
     background: white;
     color: #ff7200; }
 
@@ -451,7 +454,8 @@ ul {
   width: 25%;
   height: 255px;
   float: left; }
-  .see-our-work__single-work:hover .see-our-work__button-group-wrapper, .see-our-work__single-work:hover .see-our-work__work-signature-wrapper {
+  .see-our-work__single-work:hover .see-our-work__button-group-wrapper,
+  .see-our-work__single-work:hover .see-our-work__work-signature-wrapper {
     z-index: 1; }
 
 .see-our-work__work-img {
@@ -508,7 +512,8 @@ ul {
   width: inherit;
   transform: translateY(-50%); }
 
-.see-our-work__signature-title, .see-our-work__signature-text {
+.see-our-work__signature-title,
+.see-our-work__signature-text {
   margin: 0;
   padding: 0; }
 
@@ -590,6 +595,8 @@ ul {
   margin-right: 30px; }
 
 .what-clients-say__client-logos-wrapper {
+  padding-top: 5px;
+  padding-bottom: 5px;
   width: 100%;
   position: relative;
   height: 160px;
@@ -644,7 +651,8 @@ ul {
     border-style: solid;
     border-color: transparent transparent #666666 transparent; }
 
-.what-clients-say__tooltip-title, .what-clients-say__tooltip-text {
+.what-clients-say__tooltip-title,
+.what-clients-say__tooltip-text {
   margin: 0 0 15px 0;
   padding: 0; }
 
@@ -813,16 +821,20 @@ ul {
   width: inherit;
   color: white;
   border-bottom: solid 1px white; }
-  .company-info__single-service:hover .company-info__plus-icon {
-    display: none; }
-  .company-info__single-service:hover .company-info__minus-icon-wrapper {
-    display: inline-block; }
-  .company-info__single-service:hover .company-info__service-description {
-    display: inline-block; }
   .company-info__single-service:nth-of-type(1) {
     border-top: solid 1px white; }
 
-.company-info__service-button {
+.company-info__service-checkbox {
+  display: none; }
+  .company-info__service-checkbox:checked ~ .company-info__service-label .company-info__service-plus-icon {
+    display: none; }
+  .company-info__service-checkbox:checked ~ .company-info__service-label .company-info__service-minus-icon-wrapper {
+    display: inline-block; }
+  .company-info__service-checkbox:checked ~ .company-info__service-description {
+    display: inline-block; }
+
+.company-info__service-label {
+  display: block;
   font-family: "Open Sans", sans-serif;
   width: 100%;
   border: none;
@@ -841,7 +853,7 @@ ul {
   overflow: hidden;
   margin-bottom: 15px; }
 
-.company-info__plus-icon, .company-info__minus-icon-wrapper {
+.company-info__service-plus-icon, .company-info__service-minus-icon-wrapper {
   float: right;
   color: white;
   margin-right: 10px;
@@ -852,10 +864,10 @@ ul {
   height: 19px;
   text-align: center; }
 
-.company-info__minus-icon-wrapper {
+.company-info__service-minus-icon-wrapper {
   display: none; }
 
-.company-info__minus-icon {
+.company-info__service-minus-icon {
   display: inline-block;
   transform: translateY(-10%); }
 
@@ -866,31 +878,65 @@ ul {
   width: inherit;
   font-size: 14px; }
 
-.company-info__contact-form-input, .company-info__contact-form-textarea {
+.company-info__form-input,
+.company-info__form-textarea {
   font-family: "Open Sans", sans-serif;
-  width: 100%;
-  margin-bottom: 15px;
   border-radius: 3px;
-  outline: none;
   border: none;
   padding-left: 5px;
-  padding-right: 5px; }
+  padding-right: 5px;
+  outline: none; }
 
-.company-info__contact-form-input {
+.company-info__form-field-wrapper {
+  position: relative;
+  padding: 0px 0px;
+  background-color: white;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  width: 100%; }
+
+.company-info__form-input {
+  width: 235px;
   padding-top: 10px;
   padding-bottom: 10px; }
-  .company-info__contact-form-input::placeholder {
-    font-family: "FontAwesome";
-    word-spacing: 210px; }
 
-.company-info__contact-form-textarea {
+.company-info__form-input:valid + .company-info__form-input-placeholder {
+  display: none; }
+
+.company-info__form-input-placeholder {
+  position: absolute;
+  left: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+.company-info__form-input-placeholder::before {
+  content: attr(data-placeholder);
+  color: #a6a5a5; }
+
+.company-info__form-input-placeholder::after {
+  content: "*";
+  color: red; }
+
+.company-info__form-input-icon {
+  display: inline-block;
+  color: #a6a5a5; }
+
+.company-info__form-textarea {
+  padding-top: 10px;
+  width: 235px;
   resize: none;
   height: 120px; }
-  .company-info__contact-form-textarea::placeholder {
-    font-family: "FontAwesome";
-    word-spacing: 196px; }
 
-.company-info__contact-form-button {
+.company-info__form-textarea-icon {
+  float: right;
+  margin-right: 8px;
+  padding-top: 10px;
+  color: #a6a5a5; }
+
+.company-info__form-textarea:valid + .company-info__form-input-placeholder {
+  display: none; }
+
+.company-info__form-button {
   float: right;
   margin-right: 0;
   font-family: "Open Sans", sans-serif;

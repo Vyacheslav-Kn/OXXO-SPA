@@ -46,7 +46,7 @@ $employee-link-font-size: 18px;
 }
 
 .we-are-team__employee-name_color_orange {
-    color: $orange-color;
+    color: $button-background;
 }
 
 .we-are-team__employee-description {
@@ -76,7 +76,7 @@ $employee-link-font-size: 18px;
 
     &:hover {
         color: white;
-        background-color: $orange-color;
+        background-color: $button-background;
     }
 }
 

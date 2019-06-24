@@ -42,7 +42,8 @@ $signature-text-font-size: 14px;
     float: left;
 
     &:hover {
-        .see-our-work__button-group-wrapper, .see-our-work__work-signature-wrapper {
+        .see-our-work__button-group-wrapper,
+        .see-our-work__work-signature-wrapper {
             z-index: 1;
         }
     }
@@ -86,7 +87,7 @@ $signature-text-font-size: 14px;
     }
 
     &:hover {
-        color: $orange-color;
+        color: $button-background;
         background-color: white;
     }
 }
@@ -113,7 +114,8 @@ $signature-text-font-size: 14px;
     transform: translateY(-50%);
 }
 
-.see-our-work__signature-title, .see-our-work__signature-text {
+.see-our-work__signature-title,
+.see-our-work__signature-text {
     margin: 0;
     padding: 0;
 }

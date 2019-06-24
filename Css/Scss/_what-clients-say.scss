@@ -57,7 +57,7 @@ $tooltip-link-font-size: 12px;
 }
 
 .what-clients-say__review-author_color_orange {
-    color: $orange-color;
+    color: $button-background;
 }
 
 .what-clients-say__review-author_font_normal {
@@ -82,10 +82,12 @@ $tooltip-link-font-size: 12px;
 }
 
 .what-clients-say__client-logos-wrapper {
+    padding-top: 5px;
+    padding-bottom: 5px;
     width: $client-logos-width;
     position: relative;
     height: $client-logos-height;
-    background: $orange-color;
+    background: $button-background;
 }
 
 .what-clients-say__client-logos {
@@ -151,7 +153,8 @@ $tooltip-link-font-size: 12px;
     }
 }
 
-.what-clients-say__tooltip-title, .what-clients-say__tooltip-text {
+.what-clients-say__tooltip-title,
+.what-clients-say__tooltip-text {
     margin: 0 0 15px 0;
     padding: 0;
 }
@@ -165,6 +168,6 @@ $tooltip-link-font-size: 12px;
 }
 
 .what-clients-say__tooltip-link {
-    color: $orange-color;
+    color: $button-background;
     font-size: $tooltip-link-font-size;
 }

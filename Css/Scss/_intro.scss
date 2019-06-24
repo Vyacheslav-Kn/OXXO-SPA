@@ -50,7 +50,7 @@ $info-section-font-size: 20px;
 
     &:hover {
         & > a {
-            color: $orange-color;
+            color: $button-background;
             background: $main-menu-item-background;
             border-radius: $common-border-radius;
         }
@@ -83,12 +83,17 @@ $info-section-font-size: 20px;
         position: absolute;
     }
 
+    &:hover > a {
+        color: white;
+    }
+
     & > a {
         @extend %submenu__link-shared;
     }
 }
 
 %submenu__link-shared {
+    display: block;
     color: $submenu-link-color;
 
     & > i:nth-of-type(odd) {
@@ -258,7 +263,7 @@ $info-section-font-size: 20px;
     color: white;
 
     &:hover {
-        color: $orange-color;
+        color: $button-background;
     }
 }
 
