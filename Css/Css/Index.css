@@ -358,7 +358,6 @@ ul {
   margin-bottom: 80px; }
 
 .we-are-amazing__benefit-icon {
-  display: inline-block;
   margin-left: auto;
   color: #ff7200;
   font-size: 36px; }
@@ -395,12 +394,14 @@ ul {
 .we-are-team__title {
   color: #666666; }
 
+.we-are-team__employes {
+  display: flex;
+  justify-content: space-between; }
+
 .we-are-team__single-employee {
   box-sizing: border-box;
   /* fix for employes line */
-  display: inline-block;
-  width: 270px;
-  margin-right: 25px; }
+  width: 270px; }
 
 .we-are-team__employee-avatar {
   margin-bottom: 30px; }
@@ -422,18 +423,19 @@ ul {
   font-size: 16px;
   font-weight: 300; }
 
+.we-are-team__employee-contact-links {
+  display: flex;
+  justify-content: space-between; }
+
 .we-are-team__employee-contact-link {
   display: inline-block;
   color: #666666;
-  margin-right: 10px;
   background-color: #f0f0f0;
   border-radius: 50%;
   font-size: 18px;
   width: 42px;
   height: 45px;
   cursor: pointer; }
-  .we-are-team__employee-contact-link:nth-last-of-type(1) {
-    margin-right: 0px; }
   .we-are-team__employee-contact-link:hover {
     color: white;
     background-color: #ff7200; }
@@ -442,9 +444,6 @@ ul {
   display: inline-block;
   margin-top: 50%;
   transform: translateY(-50%); }
-
-.we-are-team__single-employee:nth-last-of-type(1) {
-  margin-right: 0px; }
 
 .see-our-work__title-underline {
   color: #666666;

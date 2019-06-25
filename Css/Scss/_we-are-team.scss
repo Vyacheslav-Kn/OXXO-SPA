@@ -32,11 +32,14 @@ $employee-link-font-size: 18px;
     color: $title-color;
 }
 
+.we-are-team__employes {
+    display: flex;
+    justify-content: space-between;
+}
+
 .we-are-team__single-employee {
     box-sizing: border-box; /* fix for employes line */
-    display: inline-block;
     width: $single-employee-width;
-    margin-right: 25px;
 }
 
 .we-are-team__employee-avatar {
@@ -63,20 +66,20 @@ $employee-link-font-size: 18px;
     font-weight: 300;
 }
 
+.we-are-team__employee-contact-links {
+    display: flex;
+    justify-content: space-between;
+}
+
 .we-are-team__employee-contact-link {
     display: inline-block;
     color: $title-color;
-    margin-right: 10px;
     background-color: $employee-link-background;
     border-radius: 50%;
     font-size: $employee-link-font-size;
     width: $employee-link-width;
     height: $employee-link-height;
     cursor: pointer;
-
-    &:nth-last-of-type(1) {
-        margin-right: 0px;
-    }
 
     &:hover {
         color: white;
@@ -88,8 +91,4 @@ $employee-link-font-size: 18px;
     display: inline-block;
     margin-top: 50%;
     transform: translateY(-50%);
-}
-
-.we-are-team__single-employee:nth-last-of-type(1) {
-    margin-right: 0px;
 }
