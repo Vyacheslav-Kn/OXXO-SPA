@@ -4,12 +4,15 @@ $tooltip-color: #d6d6d6;
 $background-url: url(../../Images/what-clients-say.png);
 $review-title-font-size: 20px;
 $review-author-name-font-size: 16px;
+
 $client-logos-width: 100%;
 $client-logos-height: 160px;
 $single-logo-width: 170px;
+
 $tooltip-font-size: 14px;
 $tooltip-width: 195px;
 $tooltip-link-font-size: 12px;
+$tooltip-text-font-size: 12px;
 
 .what-clients-say {
     @extend %we-are-amazing__title-signature;
@@ -30,6 +33,10 @@ $tooltip-link-font-size: 12px;
 .what-clients-say__background-wrapper {
     background: $background-url;
     background-size: cover;
+}
+
+.what-clients-say__centering-limiter {
+    @include centering-limiter($container-width);
 }
 
 .what-clients-say__title {
@@ -56,11 +63,11 @@ $tooltip-link-font-size: 12px;
     margin-bottom: 40px;
 }
 
-.what-clients-say__review-author_color_orange {
-    color: $button-background;
+.what-clients-say__review-author_highlighted {
+    color: $highlighted-color;
 }
 
-.what-clients-say__review-author_font_normal {
+.what-clients-say__review-author_alloted {
     font-weight: normal;
 }
 
@@ -87,7 +94,7 @@ $tooltip-link-font-size: 12px;
     width: $client-logos-width;
     position: relative;
     height: $client-logos-height;
-    background: $button-background;
+    background: $highlighted-color;
 }
 
 .what-clients-say__client-logos {
@@ -140,13 +147,13 @@ $tooltip-link-font-size: 12px;
     border-radius: $common-border-radius;
     text-align: center;
     padding: 15px 25px;
-    margin-left: -85px;
+    left: 0;
 
     &:before {
         content: "";
         position: absolute;
         top: -28px;
-        margin-left: -15px;
+        right: 40%;
         border-width: 15px;
         border-style: solid;
         border-color: transparent transparent $tooltip-background transparent;
@@ -155,7 +162,7 @@ $tooltip-link-font-size: 12px;
 
 .what-clients-say__tooltip-title,
 .what-clients-say__tooltip-text {
-    margin: 0 0 15px 0;
+    margin-bottom: 15px;
     padding: 0;
 }
 
@@ -164,10 +171,10 @@ $tooltip-link-font-size: 12px;
 }
 
 .what-clients-say__tooltip-text {
-    font-size: 12px;
+    font-size: $tooltip-text-font-size;
 }
 
 .what-clients-say__tooltip-link {
-    color: $button-background;
+    color: $button-color;
     font-size: $tooltip-link-font-size;
 }

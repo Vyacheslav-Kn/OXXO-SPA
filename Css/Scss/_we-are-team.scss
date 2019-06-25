@@ -12,6 +12,10 @@ $employee-link-font-size: 18px;
     margin-bottom: 20px;
 }
 
+.we-are-team__centering-limiter {
+    @include centering-limiter($container-width);
+}
+
 .we-are-team__title-underline {
     @extend %we-are-amazing__title-underline;
     color: $title-color;
@@ -45,8 +49,8 @@ $employee-link-font-size: 18px;
     font-size: $employee-name-font-size;
 }
 
-.we-are-team__employee-name_color_orange {
-    color: $button-background;
+.we-are-team__employee-name_highlighted {
+    color: $highlighted-color;
 }
 
 .we-are-team__employee-description {
@@ -76,7 +80,7 @@ $employee-link-font-size: 18px;
 
     &:hover {
         color: white;
-        background-color: $button-background;
+        background-color: $button-color;
     }
 }
 

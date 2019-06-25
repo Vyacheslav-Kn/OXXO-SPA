@@ -1,0 +1,86 @@
+$contacts-link-width: 40px;
+$contacts-link-height: 40px;
+$contacts-link-font-size: 16px;
+$contacts-font-size: 14px;
+
+.company-info {
+    padding-bottom: 105px;
+    padding-top: 55px;
+    background: $background-color;
+}
+
+%company-info__section-shared {
+    vertical-align: top; /* fix for different child heights */
+    display: inline-block;
+    text-align: left;
+    width: $section-width;
+    margin-right: 25px;
+    font-family: $open-sans-font;
+    color: white;
+}
+
+.company-info__centering-limiter {
+    @include centering-limiter($container-width);
+}
+
+.section-title {
+    font-size: $section-title-font-size;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.section-title-icon {
+    margin-right: 10px;
+}
+
+.company-info__contacts-section {
+    @extend %company-info__section-shared;
+    font-size: $contacts-font-size;
+}
+
+.company-info__contact-link {
+    display: inline-block;
+    color: white;
+    margin-right: 10px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 50%;
+    font-size: $contacts-link-font-size;
+    width: $contacts-link-width;
+    height: $contacts-link-height;
+    text-align: center;
+    cursor: pointer;
+
+    &:nth-last-of-type(1) {
+        margin-right: 0px;
+    }
+
+    &:hover {
+        color: $background-color;
+        background-color: white;
+    }
+}
+
+.company-info__contact-link-icon {
+    display: inline-block;
+    margin-top: 50%;
+    transform: translateY(-50%);
+}
+
+.company-info__contacts-signature {
+    width: inherit;
+    display: inline-block;
+}
+
+.company-info__single-contact {
+    width: inherit;
+    margin-top: 20px;
+
+    &:nth-last-of-type(1) {
+        margin-bottom: 20px;
+    }
+}
+
+.company-info__contact-value {
+    color: $contact-color;
+}

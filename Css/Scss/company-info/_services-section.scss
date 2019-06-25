@@ -1,0 +1,83 @@
+$service-button-width: 100%;
+$service-button-font-size: 14px;
+$collapsible-icon-width: 18px;
+$collapsible-icon-height: 19px;
+$collapsible-icon-font-size: 14px;
+
+.company-info__services-section {
+    @extend %company-info__section-shared;
+}
+
+.company-info__single-service {
+    width: inherit;
+    color: white;
+    border-bottom: solid 1px white;
+
+    &:nth-of-type(1) {
+        border-top: solid 1px white;
+    }
+}
+
+.company-info__service-checkbox {
+    display: none;
+
+    &:checked ~ .company-info__service-label .company-info__service-plus-icon {
+        display: none;
+    }
+
+    &:checked ~ .company-info__service-label .company-info__service-minus-icon-wrapper {
+        display: inline-block;
+    }
+
+    &:checked ~ .company-info__service-description {
+        display: inline-block;
+    }
+}
+
+.company-info__service-label {
+    display: block;
+    font-family: $open-sans-font;
+    width: $service-button-width;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: $service-button-font-size;
+    color: white;
+    padding: 15px 0px;
+}
+
+.company-info__service-description {
+    font-size: $post-description-font-size;
+    color: $service-description-color;
+    display: none;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+%company-info__collapsible-icon-shared {
+    float: right;
+    color: white;
+    margin-right: 10px;
+    background-color: $icon-color;
+    border-radius: 50%;
+    font-size: $collapsible-icon-font-size;
+    width: $collapsible-icon-width;
+    height: $collapsible-icon-height;
+    text-align: center;
+}
+
+.company-info__service-plus-icon {
+    @extend %company-info__collapsible-icon-shared;
+}
+
+.company-info__service-minus-icon-wrapper {
+    @extend %company-info__collapsible-icon-shared;
+    display: none;
+}
+
+.company-info__service-minus-icon {
+    display: inline-block;
+    transform: translateY(-10%);
+}

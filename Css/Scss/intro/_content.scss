@@ -1,0 +1,121 @@
+$slider-arrow-color: #c7c7c7;
+
+$title-font-size: 72px;
+$slider-arrow-font-size: 100px;
+$info-section-font-size: 20px;
+$info-section-icon-size: 8px;
+$about-us-title-size: 16px;
+
+.intro__content {
+    width: 100%;
+    box-sizing: border-box; /* slider arrow fix */
+    z-index: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: $open-sans-font;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+%intro__slider-button-shared {
+    color: $slider-arrow-color;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+.intro__slider-arrow-icon {
+    font-size: $slider-arrow-font-size;
+    display: block;
+
+    &:hover {
+        color: white;
+        cursor: pointer;
+    }
+}
+
+.intro__slider-button-left {
+    @extend %intro__slider-button-shared;
+    float: left;
+    margin-left: 25px;
+}
+
+.intro__slider-button-right {
+    @extend %intro__slider-button-shared;
+    float: right;
+    margin-right: 25px;
+}
+
+.intro__title {
+    color: white;
+    font-size: $title-font-size;
+    font-weight: 300;
+}
+
+%intro__info-button-shared {
+    color: white;
+    border: solid 1px white;
+    padding: 25px 50px;
+    background: transparent;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+        background: white;
+        color: $main-menu-item-background;
+    }
+}
+
+.intro__info-buttons-group {
+    transform: translateY(-70%);
+    overflow: hidden;
+}
+
+.intro__info-button {
+    @extend %intro__info-button-shared;
+    margin-right: 30px;
+
+    &:nth-last-of-type(1) {
+        margin-right: 0px;
+    }
+}
+
+.intro__info-sections-group {
+    margin-bottom: 60px;
+    margin-top: -50px;
+    font-size: $info-section-font-size;
+    color: white;
+}
+
+.intro__info-section-link {
+    color: white;
+
+    &:hover {
+        color: $button-color;
+    }
+}
+
+.intro__info-section-icon {
+    display: inline-block;
+    font-size: $info-section-icon-size;
+    transform: translateY(-35%);
+}
+
+.intro__about-us {
+    font-family: $open-sans-font;
+    color: white;
+    text-transform: none;
+    text-align: center;
+}
+
+.intro__about-us-title {
+    font-size: $about-us-title-size;
+}
+
+.intro__about-us-button {
+    @extend %intro__info-button-shared;
+    padding: 20px 35px;
+    transform: translateY(-35%);
+}

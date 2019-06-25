@@ -1,0 +1,42 @@
+$post-description-font-size: 13px;
+$post-description-width: 200px;
+$post-title-font-size: 14px;
+
+.company-info__posts-section {
+    @extend %company-info__section-shared;
+}
+
+.company-info__single-post {
+    margin-bottom: 25px;
+    overflow: auto; /* float fix for container */
+
+    &:nth-last-of-type(1) {
+        margin-bottom: 0px;
+    }
+}
+
+.company-info__post-image {
+    float: left;
+}
+
+.company-info__post-description {
+    font-size: $post-description-font-size;
+    float: right;
+    width: $post-description-width;
+}
+
+.company-info__post-title {
+    display: block;
+    color: white;
+    font-size: $post-title-font-size;
+    margin-bottom: 10px;
+}
+
+.company-info__post-text {
+    display: inline-block;
+    color: $contact-color;
+}
+
+.company-info__post-text_highlighted {
+    color: $highlighted-color;
+}

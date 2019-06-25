@@ -211,8 +211,12 @@ ul {
   color: #343434;
   border: solid 1px #343434; }
 
-.about-us__logo-title_color_orange {
+.about-us__logo-title_highlighted {
   color: #ff7200; }
+
+.about-us__centering-limiter {
+  width: 1170px;
+  margin: 0 auto; }
 
 .about-us__content {
   z-index: 0;
@@ -303,7 +307,7 @@ ul {
   margin-top: 25px;
   margin-bottom: 25px; }
 
-.about-us__description-text_style_oblique {
+.about-us__description-text_alloted {
   font-style: oblique; }
 
 .we-are-amazing__title-signature, .we-are-team, .we-are-team__title-signature, .see-our-work, .see-our-work__title-signature, .buy-oxxo, .buy-oxxo__title-signature, .what-clients-say, .what-clients-say__title-signature, .responsive-powerful, .responsive-powerful__title-signature {
@@ -326,6 +330,10 @@ ul {
   background: url(../../Images/we-are-amazing.png);
   background-size: cover;
   text-align: center; }
+
+.we-are-amazing__centering-limiter {
+  width: 1170px;
+  margin: 0 auto; }
 
 .we-are-amazing__title, .we-are-team__title, .see-our-work__title, .buy-oxxo__title, .what-clients-say__title, .responsive-powerful__title {
   display: inline-block;
@@ -376,6 +384,10 @@ ul {
 .we-are-team {
   margin-bottom: 20px; }
 
+.we-are-team__centering-limiter {
+  width: 1170px;
+  margin: 0 auto; }
+
 .we-are-team__title-underline {
   color: #666666;
   background: #666666; }
@@ -401,7 +413,7 @@ ul {
   color: #666666;
   font-size: 16px; }
 
-.we-are-team__employee-name_color_orange {
+.we-are-team__employee-name_highlighted {
   color: #ff7200; }
 
 .we-are-team__employee-description {
@@ -540,7 +552,7 @@ ul {
   font-weight: normal;
   margin-bottom: 20px; }
 
-.buy-oxxo__title-signature_color_orange {
+.buy-oxxo__title-signature_highlighted {
   color: #ff7200; }
 
 .buy-oxxo__button {
@@ -563,6 +575,10 @@ ul {
   background: url(../../Images/what-clients-say.png);
   background-size: cover; }
 
+.what-clients-say__centering-limiter {
+  width: 1170px;
+  margin: 0 auto; }
+
 .what-clients-say__review-title, .what-clients-say__review-author {
   display: block;
   margin-top: 0px;
@@ -578,10 +594,10 @@ ul {
   font-size: 16px;
   margin-bottom: 40px; }
 
-.what-clients-say__review-author_color_orange {
+.what-clients-say__review-author_highlighted {
   color: #ff7200; }
 
-.what-clients-say__review-author_font_normal {
+.what-clients-say__review-author_alloted {
   font-weight: normal; }
 
 .what-clients-say__slider-arrow-left, .what-clients-say__slider-arrow-right, .what-clients-say__logos-slider-arrow-left, .what-clients-say__logos-slider-arrow-right {
@@ -641,19 +657,19 @@ ul {
   border-radius: 3px;
   text-align: center;
   padding: 15px 25px;
-  margin-left: -85px; }
+  left: 0; }
   .what-clients-say__logo-tooltip:before {
     content: "";
     position: absolute;
     top: -28px;
-    margin-left: -15px;
+    right: 40%;
     border-width: 15px;
     border-style: solid;
     border-color: transparent transparent #666666 transparent; }
 
 .what-clients-say__tooltip-title,
 .what-clients-say__tooltip-text {
-  margin: 0 0 15px 0;
+  margin-bottom: 15px;
   padding: 0; }
 
 .what-clients-say__tooltip-title {
@@ -680,6 +696,10 @@ ul {
 
 .responsive-powerful__title-signature {
   color: #666666; }
+
+.responsive-powerful__centering-limiter {
+  width: 1170px;
+  margin: 0 auto; }
 
 .responsive-powerful__title {
   color: #666666; }
@@ -741,6 +761,10 @@ ul {
   margin-right: 25px;
   font-family: "Open Sans", sans-serif;
   color: white; }
+
+.company-info__centering-limiter {
+  width: 1170px;
+  margin: 0 auto; }
 
 .section-title {
   font-size: 20px;
@@ -814,7 +838,7 @@ ul {
   display: inline-block;
   color: #a6a5a5; }
 
-.company-info__post-text_color_orange {
+.company-info__post-text_highlighted {
   color: #ff7200; }
 
 .company-info__single-service {
@@ -884,7 +908,6 @@ ul {
   border-radius: 3px;
   border: none;
   padding-left: 5px;
-  padding-right: 5px;
   outline: none; }
 
 .company-info__form-field-wrapper {
@@ -899,15 +922,16 @@ ul {
   width: 235px;
   padding-top: 10px;
   padding-bottom: 10px; }
-
-.company-info__form-input:valid + .company-info__form-input-placeholder {
-  display: none; }
+  .company-info__form-input:valid ~ .company-info__form-label .company-info__form-input-placeholder {
+    display: none; }
 
 .company-info__form-input-placeholder {
   position: absolute;
   left: 5px;
   padding-top: 10px;
   padding-bottom: 10px; }
+  .company-info__form-input-placeholder:hover {
+    cursor: text; }
 
 .company-info__form-input-placeholder::before {
   content: attr(data-placeholder);
@@ -919,19 +943,29 @@ ul {
 
 .company-info__form-input-icon {
   display: inline-block;
-  color: #a6a5a5; }
+  color: #a6a5a5;
+  padding-top: 10px; }
+
+.company-info__form-label {
+  float: right;
+  padding-right: 10px; }
+  .company-info__form-label:hover {
+    cursor: text; }
 
 .company-info__form-textarea {
   padding-top: 10px;
   width: 235px;
   resize: none;
   height: 120px; }
+  .company-info__form-textarea:valid ~ .company-info__form-label .company-info__form-input-placeholder {
+    display: none; }
 
 .company-info__form-textarea-icon {
-  float: right;
-  margin-right: 8px;
+  display: inline-block;
   padding-top: 10px;
   color: #a6a5a5; }
+  .company-info__form-textarea-icon:hover {
+    cursor: text; }
 
 .company-info__form-textarea:valid + .company-info__form-input-placeholder {
   display: none; }
@@ -951,6 +985,10 @@ ul {
   font-family: "Open Sans", sans-serif;
   font-size: 14px; }
 
+.reference-info__centering-limiter {
+  width: 1170px;
+  margin: 0 auto; }
+
 .reference-info__logo {
   width: 100px;
   border: none;
@@ -960,6 +998,9 @@ ul {
 .reference-info__logo-title {
   font-size: 30px;
   font-weight: 300; }
+
+.reference-info__logo-title_highlighted {
+  color: #ff7200; }
 
 .reference-info__copyright {
   color: white;
@@ -979,9 +1020,5 @@ ul {
   margin-right: 25px; }
   .reference-info__menu-link:nth-last-of-type(1) {
     margin-right: 0px; }
-
-.width-limiter {
-  width: 1170px;
-  margin: 0 auto; }
 
 /*# sourceMappingURL=Index.css.map */

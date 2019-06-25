@@ -14,6 +14,10 @@ $reference-menu-width: 370px;
     font-size: $reference-font-size;
 }
 
+.reference-info__centering-limiter {
+    @include centering-limiter($container-width);
+}
+
 .reference-info__logo {
     @extend %intro__logo;
 
@@ -26,6 +30,10 @@ $reference-menu-width: 370px;
 .reference-info__logo-title {
     font-size: $logo-font-size;
     font-weight: 300;
+}
+
+.reference-info__logo-title_highlighted {
+    color: $highlighted-color;
 }
 
 .reference-info__copyright {

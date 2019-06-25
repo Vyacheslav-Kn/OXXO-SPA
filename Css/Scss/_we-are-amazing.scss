@@ -2,10 +2,12 @@ $background-url: url(../../Images/we-are-amazing.png);
 $horizontal-line-length: 170px;
 $title-font-size: 36px;
 $title-signature-font-size: 14px;
+
 $single-benefit-width: 370px;
 $benefit-description-width: 270px;
 $benefit-title-font-size: 18px;
 $benefit-text-font-size: 14px;
+$benefit-icon-size: 36px;
 
 %we-are-amazing__title-signature {
     font-family: $open-sans-font;
@@ -39,6 +41,10 @@ $benefit-text-font-size: 14px;
     text-align: center;
 }
 
+.we-are-amazing__centering-limiter {
+    @include centering-limiter($container-width);
+}
+
 %we-are-amazing__title {
     display: inline-block;
     font-family: $open-sans-font;
@@ -70,8 +76,8 @@ $benefit-text-font-size: 14px;
 }
 
 .we-are-amazing__benefit-icon {
-    color: $button-background;
-    font-size: 36px;
+    color: $icon-color;
+    font-size: $benefit-icon-size;
 }
 
 .we-are-amazing__benefit-description {

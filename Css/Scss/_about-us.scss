@@ -3,9 +3,12 @@ $slider-arrow-background: #595659;
 
 $title-font-size: 36px;
 $title-signature-font-size: 14px;
+
 $slider-width: 570px;
 $slider-height: 346px;
 $slider-arrow-font-size: 20px;
+$slider-arrow-margin: 20px;
+
 $description-button-font-size: 15px;
 $description-title-font-size: 20px;
 $description-text-font-size: 14px;
@@ -17,7 +20,7 @@ $description-text-font-size: 14px;
 }
 
 .main-menu_shaded {
-    border-top: solid 3px $button-background;
+    border-top: solid 3px $highlighted-color;
     box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
 }
 
@@ -38,8 +41,12 @@ $description-text-font-size: 14px;
     @extend %intro__logo-title;
 }
 
-.about-us__logo-title_color_orange {
-    color: $button-background;
+.about-us__logo-title_highlighted {
+    color: $highlighted-color;
+}
+
+.about-us__centering-limiter {
+    @include centering-limiter($container-width);
 }
 
 .about-us__content {
@@ -91,8 +98,8 @@ $description-text-font-size: 14px;
     cursor: pointer;
 
     &:hover {
-        color: $button-background;
-        border-color: $button-background;
+        color: $button-color;
+        border-color: $button-color;
         background: white;
         opacity: 1;
     }
@@ -101,19 +108,19 @@ $description-text-font-size: 14px;
 .about-us__slider-arrow-left {
     @extend %about-us__slider-arrow-shared;
     float: left;
-    margin-left: 20px;
+    margin-left: $slider-arrow-margin;
 }
 
 .about-us__slider-arrow-right {
     @extend %about-us__slider-arrow-shared;
     float: right;
-    margin-right: 20px;
+    margin-right: $slider-arrow-margin;
 }
 
 %about-us__description-button-shared {
     text-transform: uppercase;
-    border: solid 1px $button-background;
-    background: $button-background;
+    border: solid 1px $button-color;
+    background: $button-color;
     margin-right: 30px;
     cursor: pointer;
     padding: 15px 30px;
@@ -125,7 +132,7 @@ $description-text-font-size: 14px;
 
     &:hover {
         background: white;
-        color: $button-background;
+        color: $button-color;
     }
 }
 
@@ -153,6 +160,6 @@ $description-text-font-size: 14px;
     @extend %about-us__description-button-shared;
 }
 
-.about-us__description-text_style_oblique {
+.about-us__description-text_alloted {
     font-style: oblique;
 }

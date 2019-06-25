@@ -30,6 +30,10 @@ $section-text-font-size: 14px;
     color: $title-color;
 }
 
+.responsive-powerful__centering-limiter {
+    @include centering-limiter($container-width);
+}
+
 .responsive-powerful__title {
     @extend %we-are-amazing__title;
     color: $title-color;
@@ -55,7 +59,7 @@ $section-text-font-size: 14px;
     display: inline-block;
     text-align: center;
     color: white;
-    background: $button-background;
+    background: $icon-color;
     border-radius: 50%;
     font-size: $section-icon-font-size;
     width: $section-icon-width;

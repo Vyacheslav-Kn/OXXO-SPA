@@ -1,0 +1,117 @@
+$asterix-color: red;
+
+$form-font-size: 14px;
+$form-field-width: 100%;
+$input-field-width: 235px;
+$textarea-height: 120px;
+$input-placeholder-word-spacing: 210px;
+$textarea-placeholder-word-spacing: 196px;
+
+.company-info__form-section {
+    @extend %company-info__section-shared;
+    margin-right: 0px;
+}
+
+.company-info__contact-form {
+    width: inherit;
+    font-size: $form-font-size;
+}
+
+.company-info__form-input,
+.company-info__form-textarea {
+    font-family: $open-sans-font;
+    border-radius: $common-border-radius;
+    border: none;
+    padding-left: 5px;
+    outline: none;
+}
+
+.company-info__form-field-wrapper {
+    position: relative;
+    padding: 0px 0px;
+    background-color: white;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    width: $form-field-width;
+}
+
+.company-info__form-input {
+    width: $input-field-width;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    &:valid ~ .company-info__form-label .company-info__form-input-placeholder {
+        display: none;
+    }
+}
+
+.company-info__form-input-placeholder {
+    position: absolute;
+    left: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    &:hover {
+        cursor: text;
+    }
+}
+
+.company-info__form-input-placeholder::before {
+    content: attr(data-placeholder);
+    color: $contact-color;
+}
+
+.company-info__form-input-placeholder::after {
+    content: "*";
+    color: $asterix-color;
+}
+
+.company-info__form-input-icon {
+    display: inline-block;
+    color: $contact-color;
+    padding-top: 10px;
+}
+
+.company-info__form-label {
+    float: right;
+    padding-right: 10px;
+
+    &:hover {
+        cursor: text;
+    }
+}
+
+.company-info__form-textarea {
+    padding-top: 10px;
+    width: $input-field-width;
+    resize: none;
+    height: $textarea-height;
+
+    &:valid ~ .company-info__form-label .company-info__form-input-placeholder {
+        display: none;
+    }
+}
+
+.company-info__form-textarea-icon {
+    display: inline-block;
+    padding-top: 10px;
+    color: $contact-color;
+
+    &:hover {
+        cursor: text;
+    }
+}
+
+.company-info__form-textarea:valid + .company-info__form-input-placeholder {
+    display: none;
+}
+
+.company-info__form-button {
+    @extend %about-us__description-button-shared;
+    float: right;
+    margin-right: 0;
+    font-family: $open-sans-font;
+    margin-top: 5px;
+    padding: 8px 23px;
+    border: none;
+}
