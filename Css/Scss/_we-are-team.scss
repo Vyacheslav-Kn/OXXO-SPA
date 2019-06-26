@@ -14,6 +14,14 @@ $employee-link-font-size: 18px;
 
 .we-are-team__centering-limiter {
     @include centering-limiter($container-width);
+
+    @include for-phone-only {
+        @include centering-limiter($phone-width);
+    }
+
+    @include for-tablet-portrait-up {
+        @include centering-limiter($tablet-portrait-up-width);
+    }
 }
 
 .we-are-team__title-underline {
@@ -30,16 +38,45 @@ $employee-link-font-size: 18px;
 .we-are-team__title {
     @extend %we-are-amazing__title;
     color: $title-color;
+
+    @include for-phone-only {
+        margin-top: 0px;
+    }
+
+    @include for-tablet-portrait-up {
+        margin-top: 0px;
+    }
 }
 
 .we-are-team__employes {
     display: flex;
     justify-content: space-between;
+
+    @include for-phone-only {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @include for-tablet-portrait-up {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 20px;
+    }
 }
 
 .we-are-team__single-employee {
     box-sizing: border-box; /* fix for employes line */
     width: $single-employee-width;
+
+    @include for-phone-only {
+        margin-bottom: 80px;
+        width: auto;
+    }
+
+    @include for-tablet-portrait-up {
+        margin-bottom: 80px;
+        width: auto;
+    }
 }
 
 .we-are-team__employee-avatar {
@@ -64,6 +101,14 @@ $employee-link-font-size: 18px;
     color: $title-color;
     font-size: $employee-name-font-size;
     font-weight: 300;
+
+    @include for-phone-only {
+        text-align: center;
+    }
+
+    @include for-tablet-portrait-up {
+        text-align: center;
+    }
 }
 
 .we-are-team__employee-contact-links {

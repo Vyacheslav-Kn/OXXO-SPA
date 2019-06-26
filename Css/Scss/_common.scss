@@ -13,6 +13,20 @@ ul {
 }
 
 @mixin centering-limiter($block-width) {
-    width: $block-width;
+    max-width: $block-width;
     margin: 0 auto;
+}
+
+/* Responsive mixins */
+
+@mixin for-phone-only {
+    @media (max-width: $phone-width) {
+        @content;
+    }
+}
+
+@mixin for-tablet-portrait-up {
+    @media (min-width: $tablet-portrait-up-width) and (max-width: $tablet-landscape-up-width) {
+        @content;
+    }
 }

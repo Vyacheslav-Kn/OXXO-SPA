@@ -1,3 +1,4 @@
+/* Responsive sizes */
 html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, ul, li {
   margin: 0;
   padding: 0;
@@ -9,6 +10,7 @@ a {
 ul {
   list-style-type: none; }
 
+/* Responsive mixins */
 .intro {
   background: url(../../Images/BG.png);
   width: 100%;
@@ -215,7 +217,7 @@ ul {
   color: #ff7200; }
 
 .about-us__centering-limiter {
-  width: 1170px;
+  max-width: 1170px;
   margin: 0 auto; }
 
 .about-us__content {
@@ -332,7 +334,7 @@ ul {
   text-align: center; }
 
 .we-are-amazing__centering-limiter {
-  width: 1170px;
+  max-width: 1170px;
   margin: 0 auto; }
 
 .we-are-amazing__title, .we-are-team__title, .see-our-work__title, .buy-oxxo__title, .what-clients-say__title, .responsive-powerful__title {
@@ -381,8 +383,16 @@ ul {
   margin-bottom: 20px; }
 
 .we-are-team__centering-limiter {
-  width: 1170px;
+  max-width: 1170px;
   margin: 0 auto; }
+  @media (max-width: 599px) {
+    .we-are-team__centering-limiter {
+      max-width: 599px;
+      margin: 0 auto; } }
+  @media (min-width: 600px) and (max-width: 900px) {
+    .we-are-team__centering-limiter {
+      max-width: 600px;
+      margin: 0 auto; } }
 
 .we-are-team__title-underline {
   color: #666666;
@@ -393,15 +403,38 @@ ul {
 
 .we-are-team__title {
   color: #666666; }
+  @media (max-width: 599px) {
+    .we-are-team__title {
+      margin-top: 0px; } }
+  @media (min-width: 600px) and (max-width: 900px) {
+    .we-are-team__title {
+      margin-top: 0px; } }
 
 .we-are-team__employes {
   display: flex;
   justify-content: space-between; }
+  @media (max-width: 599px) {
+    .we-are-team__employes {
+      flex-direction: column;
+      align-items: center; } }
+  @media (min-width: 600px) and (max-width: 900px) {
+    .we-are-team__employes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 20px; } }
 
 .we-are-team__single-employee {
   box-sizing: border-box;
   /* fix for employes line */
   width: 270px; }
+  @media (max-width: 599px) {
+    .we-are-team__single-employee {
+      margin-bottom: 80px;
+      width: auto; } }
+  @media (min-width: 600px) and (max-width: 900px) {
+    .we-are-team__single-employee {
+      margin-bottom: 80px;
+      width: auto; } }
 
 .we-are-team__employee-avatar {
   margin-bottom: 30px; }
@@ -422,6 +455,12 @@ ul {
   color: #666666;
   font-size: 16px;
   font-weight: 300; }
+  @media (max-width: 599px) {
+    .we-are-team__employee-description {
+      text-align: center; } }
+  @media (min-width: 600px) and (max-width: 900px) {
+    .we-are-team__employee-description {
+      text-align: center; } }
 
 .we-are-team__employee-contact-links {
   display: flex;
@@ -572,7 +611,7 @@ ul {
   background-size: cover; }
 
 .what-clients-say__centering-limiter {
-  width: 1170px;
+  max-width: 1170px;
   margin: 0 auto; }
 
 .what-clients-say__review-title, .what-clients-say__review-author {
@@ -694,7 +733,7 @@ ul {
   color: #666666; }
 
 .responsive-powerful__centering-limiter {
-  width: 1170px;
+  max-width: 1170px;
   margin: 0 auto; }
 
 .responsive-powerful__title {
@@ -759,7 +798,7 @@ ul {
   color: white; }
 
 .company-info__centering-limiter {
-  width: 1170px;
+  max-width: 1170px;
   margin: 0 auto; }
 
 .section-title {
@@ -982,7 +1021,7 @@ ul {
   font-size: 14px; }
 
 .reference-info__centering-limiter {
-  width: 1170px;
+  max-width: 1170px;
   margin: 0 auto; }
 
 .reference-info__logo {
