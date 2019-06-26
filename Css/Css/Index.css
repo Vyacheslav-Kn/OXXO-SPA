@@ -334,6 +334,7 @@ ul {
   text-align: center; }
 
 .we-are-amazing__centering-limiter {
+  border: solid 1px black;
   max-width: 1170px;
   margin: 0 auto; }
   @media (max-width: 599px) {
@@ -367,11 +368,15 @@ ul {
       grid-template-columns: 1fr 1fr; } }
 
 .we-are-amazing__single-benefit {
+  border: solid 1px red;
   text-align: left;
   color: white;
   font-family: "Open Sans", sans-serif;
   display: flex;
   margin-bottom: 80px; }
+  @media (min-width: 600px) and (max-width: 900px) {
+    .we-are-amazing__single-benefit {
+      padding-left: 20px; } }
 
 .we-are-amazing__benefit-icon {
   margin-left: auto;
@@ -381,6 +386,10 @@ ul {
 .we-are-amazing__benefit-description {
   width: 270px;
   margin-left: auto; }
+  @media (min-width: 600px) and (max-width: 900px) {
+    .we-are-amazing__benefit-description {
+      width: auto;
+      margin-left: 20px; } }
 
 .we-are-amazing__benefit-title {
   font-size: 18px;
