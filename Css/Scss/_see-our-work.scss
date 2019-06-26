@@ -34,6 +34,7 @@ $signature-text-font-size: 14px;
 .see-our-work__title {
     @extend %we-are-amazing__title;
     color: $title-color;
+    margin-top: 20px;
 }
 
 .see-our-work__single-work {

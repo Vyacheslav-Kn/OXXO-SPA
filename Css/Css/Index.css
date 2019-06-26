@@ -433,7 +433,8 @@ ul {
 
 .we-are-team__employes {
   display: flex;
-  justify-content: space-between; }
+  justify-content: center;
+  flex-wrap: wrap; }
   @media (max-width: 599px) {
     .we-are-team__employes {
       flex-direction: column;
@@ -447,14 +448,14 @@ ul {
 .we-are-team__single-employee {
   box-sizing: border-box;
   /* fix for employes line */
-  width: 270px; }
+  width: 270px;
+  margin-bottom: 80px;
+  margin-right: 20px; }
   @media (max-width: 599px) {
     .we-are-team__single-employee {
-      margin-bottom: 80px;
       width: auto; } }
   @media (min-width: 600px) and (max-width: 900px) {
     .we-are-team__single-employee {
-      margin-bottom: 80px;
       width: auto; } }
 
 .we-are-team__employee-avatar {
@@ -513,7 +514,8 @@ ul {
   color: #666666; }
 
 .see-our-work__title {
-  color: #666666; }
+  color: #666666;
+  margin-top: 20px; }
 
 .see-our-work__single-work {
   z-index: 0;

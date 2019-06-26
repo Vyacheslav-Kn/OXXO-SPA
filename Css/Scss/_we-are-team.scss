@@ -50,7 +50,8 @@ $employee-link-font-size: 18px;
 
 .we-are-team__employes {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
 
     @include for-phone-only {
         flex-direction: column;
@@ -67,14 +68,14 @@ $employee-link-font-size: 18px;
 .we-are-team__single-employee {
     box-sizing: border-box; /* fix for employes line */
     width: $single-employee-width;
+    margin-bottom: 80px;
+    margin-right: 20px;
 
     @include for-phone-only {
-        margin-bottom: 80px;
         width: auto;
     }
 
     @include for-tablet-portrait-up {
-        margin-bottom: 80px;
         width: auto;
     }
 }
