@@ -40,7 +40,7 @@ $benefit-icon-size: 36px;
     text-align: center;
 }
 
-.we-are-amazing__centering-limiter {border: solid 1px black;
+.we-are-amazing__centering-limiter {
     @include centering-limiter($container-width);
 
     @include for-phone-only {
@@ -81,7 +81,7 @@ $benefit-icon-size: 36px;
     }
 }
 
-.we-are-amazing__single-benefit {border: solid 1px red;
+.we-are-amazing__single-benefit {
     text-align: left;
     color: white;
     font-family: $open-sans-font;

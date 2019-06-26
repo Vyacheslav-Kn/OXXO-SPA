@@ -334,7 +334,6 @@ ul {
   text-align: center; }
 
 .we-are-amazing__centering-limiter {
-  border: solid 1px black;
   max-width: 1170px;
   margin: 0 auto; }
   @media (max-width: 599px) {
@@ -368,7 +367,6 @@ ul {
       grid-template-columns: 1fr 1fr; } }
 
 .we-are-amazing__single-benefit {
-  border: solid 1px red;
   text-align: left;
   color: white;
   font-family: "Open Sans", sans-serif;
