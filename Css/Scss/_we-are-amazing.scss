@@ -42,6 +42,14 @@ $benefit-icon-size: 36px;
 
 .we-are-amazing__centering-limiter {
     @include centering-limiter($container-width);
+
+    @include for-phone-only {
+        @include centering-limiter($phone-width);
+    }
+
+    @include for-tablet-portrait-up {
+        @include centering-limiter($tablet-portrait-up-width);
+    }
 }
 
 %we-are-amazing__title {
@@ -63,6 +71,14 @@ $benefit-icon-size: 36px;
     padding-bottom: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+
+    @include for-phone-only {
+        grid-template-columns: 1fr;
+    }
+
+    @include for-tablet-portrait-up {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .we-are-amazing__single-benefit {

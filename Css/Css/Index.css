@@ -336,6 +336,14 @@ ul {
 .we-are-amazing__centering-limiter {
   max-width: 1170px;
   margin: 0 auto; }
+  @media (max-width: 599px) {
+    .we-are-amazing__centering-limiter {
+      max-width: 599px;
+      margin: 0 auto; } }
+  @media (min-width: 600px) and (max-width: 900px) {
+    .we-are-amazing__centering-limiter {
+      max-width: 600px;
+      margin: 0 auto; } }
 
 .we-are-amazing__title, .we-are-team__title, .see-our-work__title, .buy-oxxo__title, .what-clients-say__title, .responsive-powerful__title {
   display: inline-block;
@@ -351,6 +359,12 @@ ul {
   padding-bottom: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; }
+  @media (max-width: 599px) {
+    .we-are-amazing__benefits {
+      grid-template-columns: 1fr; } }
+  @media (min-width: 600px) and (max-width: 900px) {
+    .we-are-amazing__benefits {
+      grid-template-columns: 1fr 1fr; } }
 
 .we-are-amazing__single-benefit {
   text-align: left;
